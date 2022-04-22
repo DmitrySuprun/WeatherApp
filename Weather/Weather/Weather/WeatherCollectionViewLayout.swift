@@ -14,7 +14,7 @@ class WeatherCollectionViewLayout: UICollectionViewLayout {
     // Количество столбцов
     var columnsCount = 2
     // Высота ячейки
-    var cellHeight: CGFloat = 128
+    var cellHeight: CGFloat = 150
     // Хранит суммарную высоту всех ячеек
     private var totalCellsHeight: CGFloat = 0
     

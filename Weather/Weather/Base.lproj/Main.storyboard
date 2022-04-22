@@ -253,18 +253,18 @@
                                 <collectionViewLayout key="collectionViewLayout" id="neK-ad-Kdw" customClass="WeatherCollectionViewLayout" customModule="Weather" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WeatherCellID" id="Gh9-vW-82c" customClass="WeatherCollectionViewCell" customModule="Weather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dK9-hc-zIZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnP-2o-Uf2">
-                                                    <rect key="frame" x="-15" y="-15" width="80" height="80"/>
+                                                    <rect key="frame" x="35" y="35" width="80" height="80"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzF-Pd-ALr">
-                                                    <rect key="frame" x="-15" y="-15" width="80" height="80"/>
+                                                    <rect key="frame" x="35" y="35" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="VdC-BJ-sbw"/>
                                                         <constraint firstAttribute="height" constant="80" id="iGK-uV-RuO"/>
@@ -274,13 +274,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTv-QI-gwZ">
-                                                    <rect key="frame" x="4" y="21" width="42" height="21"/>
+                                                    <rect key="frame" x="54" y="121" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cde-Ga-GR3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="50" y="0.0" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="NqS-JU-gsE"/>
                                                         <constraint firstAttribute="width" constant="50" id="ly7-4Z-A2c"/>
@@ -300,6 +300,7 @@
                                                 <constraint firstItem="CnP-2o-Uf2" firstAttribute="width" secondItem="kzF-Pd-ALr" secondAttribute="width" id="yhN-H4-X0V"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="150" height="150"/>
                                         <connections>
                                             <outlet property="shadowView" destination="CnP-2o-Uf2" id="hMu-jo-5lA"/>
                                             <outlet property="time" destination="RTv-QI-gwZ" id="aEL-bp-nfM"/>
