@@ -13,7 +13,6 @@ class LoginFormController: UIViewController {
     
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
-    
     @IBOutlet weak var scrollView: UIScrollView!
     
     // MARK: - Life Cycles Method

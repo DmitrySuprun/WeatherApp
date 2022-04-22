@@ -9,10 +9,11 @@ import UIKit
 
 class MyCitiesTableViewController: UITableViewController {
     
-    var cities = [String]()
+    var cities = [(title: String, emblem: String)]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "CitiesTableViewCell", bundle: nil), forCellReuseIdentifier: "CitiesTableViewCellID")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,10 +36,13 @@ class MyCitiesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCitiesCellID", for: indexPath)
-        var configuration = cell.defaultContentConfiguration()
-        configuration.text = cities[indexPath.row]
-        cell.contentConfiguration = configuration
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CitiesTableViewCellID", for: indexPath) as! CitiesTableViewCell
+        let city = cities[indexPath.row]
+        cell.configure(city: city.title, emblem: UIImage(named: city.emblem)!)
+        
+//        var configuration = cell.defaultContentConfiguration()
+//        configuration.text = cities[indexPath.row]
+//        cell.contentConfiguration = configuration
         return cell
     }
     
@@ -79,6 +83,11 @@ class MyCitiesTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "WeatherID", sender: nil)
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -97,12 +106,20 @@ class MyCitiesTableViewController: UITableViewController {
             guard let allCitiesTableViewController = segue.source as? AllCitiesTableViewController else { return }
             if let indexPath = allCitiesTableViewController.tableView.indexPathForSelectedRow {
                 let city = allCitiesTableViewController.cities[indexPath.row]
-                if !cities.contains(city) {
+                if !cities.contains(where: { (title: String, emblem: String) in
+                    if title == city.title {
+                        return true
+                    } else {
+                        return false
+                    }
+                })
+                {
                     cities.append(city)
                 }
-                tableView.reloadData()
             }
+            tableView.reloadData()
         }
     }
-
 }
+
+

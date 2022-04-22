@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable class GradientUIView: UIView {
+class GradientUIView: UIView {
     
     
     // MARK: - IBOutlets

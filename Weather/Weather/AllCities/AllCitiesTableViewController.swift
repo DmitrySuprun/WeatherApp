@@ -9,16 +9,17 @@ import UIKit
 
 class AllCitiesTableViewController: UITableViewController {
     
-    var cities = ["Minsk", "Kiev", "Warsaw"]
+    var cities = [(title: "Kyiv", emblem: "Kyiv"),
+                  (title: "Mariupol", emblem: "Mariupol"),
+                  (title: "Lviv", emblem: "Lviv"),
+                  (title: "Minsk", emblem: "Minsk"),
+                  (title: "Grodno", emblem: "Grodno")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tableView.register(UINib(nibName: "CitiesTableViewCell", bundle: nil), forCellReuseIdentifier: "CitiesTableViewCellID")
     }
 
     // MARK: - Table view data source
@@ -35,13 +36,16 @@ class AllCitiesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityCellID", for: indexPath) as! AllCitiesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CitiesTableViewCellID", for: indexPath) as! CitiesTableViewCell
         let city = cities[indexPath.row]
-        var configuration = cell.defaultContentConfiguration()
-        configuration.image = UIImage(systemName: "eye")
-        configuration.text = city
-        configuration.secondaryText = String(indexPath.row)
-        cell.contentConfiguration = configuration
+        cell.configure(city: city.title, emblem: UIImage(named: city.emblem)!)
+        
+//        let city = cities[indexPath.row]
+//        var configuration = cell.defaultContentConfiguration()
+//        configuration.image = UIImage(systemName: "eye")
+//        configuration.text = city
+//        configuration.secondaryText = String(indexPath.row)
+//        cell.contentConfiguration = configuration
         
         return cell
     }
@@ -81,6 +85,10 @@ class AllCitiesTableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "AddCitySegueID", sender: nil)
+    }
 
     /*
     // MARK: - Navigation

@@ -26,7 +26,7 @@ enum Day: Int {
     }
 }
 
-@IBDesignable class WeekDayPickerUIControl: UIControl {
+class WeekDayPickerUIControl: UIControl {
     
     var selectedDay: Day? = nil {
         didSet {

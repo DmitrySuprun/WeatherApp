@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D50C01712801983B006D8583 /* AllCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50C01702801983B006D8583 /* AllCitiesTableViewController.swift */; };
-		D50C017328019858006D8583 /* AllCitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50C017228019858006D8583 /* AllCitiesTableViewCell.swift */; };
-		D50C017A2801BA50006D8583 /* MyCitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50C01792801BA50006D8583 /* MyCitiesTableViewCell.swift */; };
 		D50C017C2801BA6E006D8583 /* MyCitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50C017B2801BA6E006D8583 /* MyCitiesTableViewController.swift */; };
 		D50C017F2801CDA3006D8583 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50C017E2801CDA3006D8583 /* WeatherViewController.swift */; };
 		D50C01812801CDBD006D8583 /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50C01802801CDBD006D8583 /* WeatherCollectionViewCell.swift */; };
@@ -22,12 +20,13 @@
 		D5B2B3CB27FA727800FA1E17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B2B3CA27FA727800FA1E17 /* Assets.xcassets */; };
 		D5B2B3CE27FA727800FA1E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B2B3CC27FA727800FA1E17 /* LaunchScreen.storyboard */; };
 		D5B2B3D627FA72AB00FA1E17 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2B3D527FA72AB00FA1E17 /* LoginFormController.swift */; };
+		D5C668422811AEF900B9F04A /* CitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C668402811AEF900B9F04A /* CitiesTableViewCell.swift */; };
+		D5C668432811AEF900B9F04A /* CitiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C668412811AEF900B9F04A /* CitiesTableViewCell.xib */; };
+		D5C668452812E4C100B9F04A /* WeatherCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C668442812E4C100B9F04A /* WeatherCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D50C01702801983B006D8583 /* AllCitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCitiesTableViewController.swift; sourceTree = "<group>"; };
-		D50C017228019858006D8583 /* AllCitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCitiesTableViewCell.swift; sourceTree = "<group>"; };
-		D50C01792801BA50006D8583 /* MyCitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCitiesTableViewCell.swift; sourceTree = "<group>"; };
 		D50C017B2801BA6E006D8583 /* MyCitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCitiesTableViewController.swift; sourceTree = "<group>"; };
 		D50C017E2801CDA3006D8583 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		D50C01802801CDBD006D8583 /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -42,6 +41,9 @@
 		D5B2B3CD27FA727800FA1E17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5B2B3CF27FA727800FA1E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5B2B3D527FA72AB00FA1E17 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		D5C668402811AEF900B9F04A /* CitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesTableViewCell.swift; sourceTree = "<group>"; };
+		D5C668412811AEF900B9F04A /* CitiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesTableViewCell.xib; sourceTree = "<group>"; };
+		D5C668442812E4C100B9F04A /* WeatherCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				D50C01702801983B006D8583 /* AllCitiesTableViewController.swift */,
-				D50C017228019858006D8583 /* AllCitiesTableViewCell.swift */,
 			);
 			path = AllCities;
 			sourceTree = "<group>";
@@ -67,7 +68,8 @@
 		D50C01742801B9B7006D8583 /* MyCities */ = {
 			isa = PBXGroup;
 			children = (
-				D50C01792801BA50006D8583 /* MyCitiesTableViewCell.swift */,
+				D5C668402811AEF900B9F04A /* CitiesTableViewCell.swift */,
+				D5C668412811AEF900B9F04A /* CitiesTableViewCell.xib */,
 				D50C017B2801BA6E006D8583 /* MyCitiesTableViewController.swift */,
 			);
 			path = MyCities;
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				D50C017E2801CDA3006D8583 /* WeatherViewController.swift */,
+				D5C668442812E4C100B9F04A /* WeatherCollectionViewLayout.swift */,
 				D50C01802801CDBD006D8583 /* WeatherCollectionViewCell.swift */,
 			);
 			path = Weather;
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C668432811AEF900B9F04A /* CitiesTableViewCell.xib in Resources */,
 				D5B2B3CE27FA727800FA1E17 /* LaunchScreen.storyboard in Resources */,
 				D5B2B3CB27FA727800FA1E17 /* Assets.xcassets in Resources */,
 				D5B2B3C627FA727500FA1E17 /* Main.storyboard in Resources */,
@@ -197,15 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C668422811AEF900B9F04A /* CitiesTableViewCell.swift in Sources */,
 				D50C017F2801CDA3006D8583 /* WeatherViewController.swift in Sources */,
 				D53C9FD028097526004A7369 /* GradientUIView.swift in Sources */,
-				D50C017A2801BA50006D8583 /* MyCitiesTableViewCell.swift in Sources */,
+				D5C668452812E4C100B9F04A /* WeatherCollectionViewLayout.swift in Sources */,
 				D5B2B3C927FA727500FA1E17 /* Weather.xcdatamodeld in Sources */,
 				D5B2B3BF27FA727500FA1E17 /* AppDelegate.swift in Sources */,
 				D5B2B3C127FA727500FA1E17 /* SceneDelegate.swift in Sources */,
 				D50C01812801CDBD006D8583 /* WeatherCollectionViewCell.swift in Sources */,
 				D5B2B3D627FA72AB00FA1E17 /* LoginFormController.swift in Sources */,
-				D50C017328019858006D8583 /* AllCitiesTableViewCell.swift in Sources */,
 				D50C017C2801BA6E006D8583 /* MyCitiesTableViewController.swift in Sources */,
 				D53C9FD328097DE7004A7369 /* WeekDayPickerUIControl.swift in Sources */,
 				D50C01712801983B006D8583 /* AllCitiesTableViewController.swift in Sources */,
