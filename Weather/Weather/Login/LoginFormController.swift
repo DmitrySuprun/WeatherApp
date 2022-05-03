@@ -11,6 +11,8 @@ class LoginFormController: UIViewController {
     
     // MARK: - IBOutlet
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var labelWeather: UILabel!
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -19,6 +21,9 @@ class LoginFormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        animateTitleAppearing()
+        animateFieldsAppearing()
+        animateAuthButton()
         
         // Жест нажатия
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -89,6 +94,56 @@ class LoginFormController: UIViewController {
     @objc func hideKeyboard() {
         self.scrollView?.endEditing(true)
     }
+    
+    // MARK: - Private Methods
+
+    private func animateTitleAppearing() {
+        
+        labelWeather.transform = CGAffineTransform(translationX: 0, y: -self.view.bounds.height/2)
+        
+        UIView.animate(withDuration: 1,
+                       delay: 0.5,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseOut,
+                       animations: {
+            self.labelWeather.transform = .identity },
+                       completion: nil)
+    }
+    
+    private func animateFieldsAppearing() {
+        
+        let fadeInAnimation = CABasicAnimation(keyPath: "opacity")
+        
+        fadeInAnimation.fromValue = 0
+        fadeInAnimation.toValue = 1
+        fadeInAnimation.duration = 1
+        fadeInAnimation.beginTime = CACurrentMediaTime() + 1
+        fadeInAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        fadeInAnimation.fillMode = CAMediaTimingFillMode.backwards
+        
+        self.loginInput.layer.add(fadeInAnimation, forKey: nil)
+        self.passwordInput.layer.add(fadeInAnimation, forKey: nil)
+        
+    }
+    
+    private func animateAuthButton() {
+        
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.stiffness = 200
+        animation.mass = 2
+        animation.duration = 2
+        animation.beginTime = CACurrentMediaTime() + 1
+        animation.fillMode = CAMediaTimingFillMode.backwards
+        
+        self.loginButton.layer.add(animation, forKey: nil)
+        
+    }
+    
 }
 
 
+    

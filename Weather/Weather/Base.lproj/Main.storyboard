@@ -43,6 +43,7 @@
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-ll-NhF">
                                         <rect key="frame" x="114" y="245" width="200" height="34"/>
+                                        <color key="backgroundColor" red="0.79607844350000001" green="0.51372551919999998" blue="0.62745100259999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="6gR-pA-oqk"/>
                                         </constraints>
@@ -51,6 +52,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AlJ-MO-VFv">
                                         <rect key="frame" x="114" y="336" width="200" height="34"/>
+                                        <color key="backgroundColor" red="0.63529413940000001" green="0.55686277149999996" blue="0.67058825489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -113,6 +115,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="4yI-rw-iE6"/>
                     <connections>
+                        <outlet property="labelWeather" destination="bo1-7a-gMZ" id="8Ur-1x-VTc"/>
+                        <outlet property="loginButton" destination="fRd-AN-h9f" id="98M-Pw-Rdv"/>
                         <outlet property="loginInput" destination="d6L-ll-NhF" id="Vh4-IR-0GI"/>
                         <outlet property="passwordInput" destination="AlJ-MO-VFv" id="2YG-2L-OLG"/>
                         <outlet property="scrollView" destination="7jX-br-lWA" id="baD-FS-9SQ"/>
